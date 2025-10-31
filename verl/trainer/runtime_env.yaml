@@ -1,5 +1,8 @@
 working_dir: ./
-excludes: ["/.git/"]
+excludes: ["/.git/","/work_dirs/**/*","/work_cgr/**/*"]
 env_vars:
   TORCH_NCCL_AVOID_RECORD_STREAMS: "1"
   CUDA_DEVICE_MAX_CONNECTIONS: "1"
+  TENSORBOARD_DIR: "${TENSORBOARD_DIR}"
+dashboard_server:
+  max_request_size: 209715200
